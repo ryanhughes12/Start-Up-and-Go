@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Startup Budget & Reinvestment Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Startup Planner</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#tool">Planner</a></li>
+          <li><a href="#about">About</a></li>
+          <li><button id="themeToggle" aria-label="Toggle dark mode">🌓</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Plan. Reinvest. Grow.</h2>
+      <p>A smart budgeting tool for startups — forecast profits and decide where to reinvest.</p>
+      <a href="#tool" class="btn btn-primary">Try It Now</a>
+    </div>
+    <img
+      class="hero-img"
+      src="https://i.postimg.cc/your-hero-image.jpg"
+      alt="Startup founders reviewing charts"
+    />
+  </section>
+
+  <section id="features" class="features">
+    <h2>Key Features</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <img src="https://i.postimg.cc/your-icon1.jpg" alt="Budget Icon" />
+        <h3>Smart Budgeting</h3>
+        <p>Track revenue, expenses, and profits effortlessly in one clean interface.</p>
+      </div>
+      <div class="feature">
+        <img src="https://i.postimg.cc/your-icon2.jpg" alt="Analytics Icon" />
+        <h3>Visual Analytics</h3>
+        <p>Interactive charts help you understand growth and reinvestment performance.</p>
+      </div>
+      <div class="feature">
+        <img src="https://i.postimg.cc/your-icon3.jpg" alt="Reinvestment Icon" />
+        <h3>Reinvestment Strategy</h3>
+        <p>AI-assisted suggestions for smarter business growth planning.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tool" class="planner">
+    <h2>Budget & Reinvestment Planner</h2>
+    <p>Enter your monthly figures and see your reinvestment insights instantly.</p>
+
+    <div class="planner-card">
+      <form id="budgetForm">
+        <label>Monthly Revenue (€)
+          <input type="number" id="revenue" value="10000" min="0" />
+        </label>
+        <label>Fixed Monthly Costs (€)
+          <input type="number" id="fixedCosts" value="4000" min="0" />
+        </label>
+        <label>Variable Monthly Costs (€)
+          <input type="number" id="variableCosts" value="2000" min="0" />
+        </label>
+        <label>Reinvestment % of Profit <output id="reinvestOut">30%</output>
+          <input type="range" id="reinvestPct" min="0" max="100" value="30" />
+        </label>
+        <button type="submit" class="btn btn-primary">Calculate</button>
+        <button type="button" id="downloadBtn" class="btn btn-secondary">Download CSV</button>
+      </form>
+
+      <div id="results" class="results">
+        <div id="summary"></div>
+        <div id="allocations"></div>
+        <canvas id="cashflowChart" width="600" height="220"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About This Project</h2>
+    <p>This website was built using HTML, CSS, and JavaScript with AI assistance to support startup budgeting and reinvestment planning.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Startup Planner | Built with AI-Assisted Development</p>
+  </footer>
+</body>
+</html>
